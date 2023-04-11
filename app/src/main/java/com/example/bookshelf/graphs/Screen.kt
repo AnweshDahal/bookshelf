@@ -1,7 +1,7 @@
 package com.example.bookshelf.graphs
 
 // a sealed class is a type of class that allows inheritance only to the classes inside of it
-sealed class Screen(val route: String){
+sealed class Screen(val route: String) {
     /*
     * Objects are used to setup route names
     * this allows us to perform additional actions on the route name instead of being left
@@ -9,4 +9,15 @@ sealed class Screen(val route: String){
     * object is a special type of class that does not require any parameter
      */
     object MainScreen : Screen("main_screen")
+    object DetailScreen : Screen("details_screen")
+
+    // route formatter for args
+    fun withArgs(vararg args: String): String {
+        return buildString {
+            append(route)
+            args.forEach { arg ->
+                append("/$arg")
+            }
+        }
+    }
 }
