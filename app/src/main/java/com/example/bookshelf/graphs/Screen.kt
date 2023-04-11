@@ -8,5 +8,5 @@ sealed class Screen(val route: String){
     * with just the string containing the name of the route.
     * object is a special type of class that does not require any parameter
      */
-    object MainScreen : Screen("main_screen")
+    object MainScreenRouter : Screen("main_screen")
 }

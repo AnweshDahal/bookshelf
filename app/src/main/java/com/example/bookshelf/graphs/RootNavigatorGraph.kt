@@ -9,8 +9,8 @@ import androidx.navigation.compose.rememberNavController
 @Composable
 fun RootNavigatorGraph() {
     val navController = rememberNavController() // main navigation controller
-    NavHost(navController = navController, startDestination = Screen.MainScreen.route) {
-        composable(route = Screen.MainScreen.route){
+    NavHost(navController = navController, startDestination = Screen.MainScreenRouter.route) {
+        composable(route = Screen.MainScreenRouter.route){
             TODO("The activity you want to display")
         }
     }
