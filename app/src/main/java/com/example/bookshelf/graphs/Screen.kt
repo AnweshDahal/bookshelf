@@ -9,4 +9,14 @@ sealed class Screen(val route: String){
     * object is a special type of class that does not require any parameter
      */
     object MainScreenRouter : Screen("main_screen")
+
+    // Home Route
+    object HomeRouter : Screen("home")
+
+    // Explore Route
+    object ExploreRoute : Screen("explore")
+
+    // Library Route
+    object LibraryRoute : Screen("library")
+
 }
